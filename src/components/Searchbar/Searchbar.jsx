@@ -7,11 +7,11 @@ import { initialState } from './initialState';
 import { useForm } from 'shared/hooks/useForm';
 
 const SearchBar = ({ onSubmit, onChange }) => {
-  const { handleChange, handleSubmit } = useForm(
+  const { handleChange, handleSubmit } = useForm({
     initialState,
     onSubmit,
-    onChange
-  );
+    onChange,
+  });
 
   return (
     <header className={styles.SearchBar}>
